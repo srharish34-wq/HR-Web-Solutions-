@@ -9,6 +9,9 @@ body {
   background: #140018;
   color: #fff;
 }
+html, body {
+  overflow-x: hidden;
+}
 
 /* HEADER */
 .header {
@@ -2802,6 +2805,7 @@ h2 {
   }
 
 }
+
 
 
 
