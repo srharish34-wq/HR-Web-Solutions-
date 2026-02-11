@@ -2205,11 +2205,56 @@ h2 {
   transform: translateY(-8px);
 }
 
-/* ================================= */
-/* 📱 Promotions Mobile Responsive */
-/* ================================= */
+/* =========================
+   PROMOTIONS SECTION
+========================= */
 
-/* Tablet */
+.promotions {
+  padding: 80px 100px;
+  background: #0b0613;
+}
+
+.promotions h2 {
+  font-size: 42px;
+  text-align: center;
+  margin-bottom: 50px;
+  color: #fff;
+  font-weight: 700;
+}
+
+/* GRID */
+.promo-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+/* CARD */
+.promo-item {
+  border-radius: 16px;
+  overflow: hidden;
+  background: #1a1025;
+  transition: transform 0.3s ease;
+}
+
+.promo-item:hover {
+  transform: translateY(-8px);
+}
+
+/* IMAGE (IMPORTANT FIX) */
+.promo-item img {
+  width: 100%;
+  height: auto;              /* 🔥 keeps original size */
+  display: block;
+  border-radius: 16px;
+}
+
+
+
+/* =========================
+   TABLET (<=1024px)
+========================= */
+
 @media (max-width: 1024px) {
 
   .promotions {
@@ -2227,34 +2272,43 @@ h2 {
 }
 
 
-/* Mobile */
+
+/* =========================
+   MOBILE (<=768px)
+========================= */
+
 @media (max-width: 768px) {
 
   .promotions {
-    padding: 50px 25px;
+    padding: 50px 20px;
   }
 
   .promotions h2 {
-    font-size: 26px;
+    font-size: 28px;
     margin-bottom: 30px;
   }
 
   .promo-grid {
-    grid-template-columns: 1fr; /* 2 → 1 column */
+    grid-template-columns: 1fr;   /* 🔥 2 columns → 1 column */
     gap: 20px;
   }
 
   .promo-item {
-    border-radius: 12px;
+    border-radius: 14px;
   }
 
   .promo-item img {
-    height: 250px; /* control image height */
+    width: 100%;
+    height: auto;   /* 🔥 no fixed height */
   }
 }
 
 
-/* Small Mobile */
+
+/* =========================
+   SMALL MOBILE (<=480px)
+========================= */
+
 @media (max-width: 480px) {
 
   .promotions {
@@ -2265,11 +2319,12 @@ h2 {
     font-size: 22px;
   }
 
-  .promo-item img {
-    height: 200px;
+  .promo-grid {
+    gap: 18px;
   }
 
 }
+
 
 
 
@@ -2805,7 +2860,6 @@ h2 {
   }
 
 }
-
 
 
 
